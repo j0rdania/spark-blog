@@ -1,11 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Spark-Blog
 
-Things you may want to cover:
+##This is Sparky's first Rails app!
 
-* Ruby version
+* Ruby version:
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-darwin15]
 
 * System dependencies
 
