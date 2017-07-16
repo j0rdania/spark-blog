@@ -1,5 +1,19 @@
-Hellooooooo! I am a new article!
+<%= stylesheet_link_tag "sparky-blog.css" %>
 
+Hellooooooo! I am a new article!
+<% if @article.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@article.errors.count, "error") %> prohibited
+      this article from being saved:
+    </h2>
+    <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <%= form_for :article, url: articles_path do |f| %>
   <p>
     <%= f.label :title %><br>
@@ -14,4 +28,7 @@ Hellooooooo! I am a new article!
   <p>
     <%= f.submit %>
   </p>
+
 <% end %>
+
+<%= link_to 'Back', articles_path %>
